@@ -1,6 +1,3 @@
-import gmpy
-import config as c
-
 EPS = 1e-9
 limit = 15499.0/94744
 

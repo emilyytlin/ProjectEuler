@@ -10,4 +10,4 @@ def is_prime(n):
 	return True
 primes = list(x for x in range(999, 1, -1) if is_prime(x))
 print(primes)
-#(10^(prime-1)-1)/prime
+#check big primes?

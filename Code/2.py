@@ -9,4 +9,4 @@ while True:
 	temp = curr
 	curr = curr + prev
 	prev = temp
-print sum
+print(sum)

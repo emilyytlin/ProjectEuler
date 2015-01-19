@@ -3,7 +3,7 @@ def is_prime(n):
 		return True
 	if n <= 0:
 		return False
-	for i in xrange(2, n):
+	for i in range(2, n):
 		if i * i > n:
 			break
 		if n % i == 0:
@@ -12,8 +12,8 @@ def is_prime(n):
 
 ans = 0
 max_sequence = 0
-for a in xrange(-1000, 1001):
-	for b in xrange(-1000, 1001):
+for a in range(-1000, 1001):
+	for b in range(-1000, 1001):
 		n = 0
 		while is_prime(n*n + a*n + b):
 			if n > max_sequence:

@@ -13,4 +13,4 @@ for i in range(2, 2000000):
 	if (is_prime(i)):
 		primes.append(i)
 		sum += i
-print sum
+print(sum)

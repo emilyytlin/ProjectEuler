@@ -8,4 +8,4 @@ for i in range(999, 101, -1):
 		if is_palindrome(curr) and curr > max:
 			ans = curr
 			max = curr
-print ans
+print(ans)

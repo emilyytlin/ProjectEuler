@@ -6,4 +6,4 @@ for i in range(0, 988):
 		curr *= int(j)
 	if curr > max:
 		max = curr
-print max
+print(max)

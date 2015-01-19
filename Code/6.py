@@ -5,4 +5,4 @@ for i in range(1, 101):
 for i in range(1, 101):
 	b = b + i
 b = b * b
-print b - a
+print(b - a)

@@ -17,4 +17,4 @@ while True:
 	if count == 10001:
 		break
 	curr = curr + 1
-print curr
+print(curr)
