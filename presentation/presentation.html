@@ -43,20 +43,17 @@
       <ul>
         <li>Math-based computer science problems</li>
         <li>498 problems currently</li>
-        <li>Program should take under 1 minute</li>
+        <li>Program should take under one minute</li>
       </ul>
-      <img src="250.png">
+      <img class="slide" src="250.png">
     </section>
 
     <section class="slide" id="p1">
       <h3>Problem 1</h3>
       <p>Find the sum of all multiples of 3 or 5 below 1000</p>
-      <ul>
-        <li class="slide" id="code1"><pre><code>print(sum(filter(lambda x: 
+      <pre class="slide" id="code1"><code>print(sum(filter(lambda x: 
           x % 3 == 0 or x % 5 == 0, 
-          range(1, 1000))))</code></pre
-          ></li>
-      </ul>
+          range(1, 1000))))</code></pre>
     </section>
 
     <section class="slide" id="p59-intro">
@@ -65,8 +62,8 @@
       <ul>
         <li>Convert text to ASCII</li>
         <li>XOR each byte with key</li>
+        <li>The same key can be used for decryption</li>
       </ul>
-      <p>The same key can be used for decryption</p> 
       <table style="width:100%">
         <tr>
           <td><strong>x</strong></td>
@@ -109,9 +106,9 @@
     <section class="slide" id="p59-unbreakable">
       <h3>Unbreakable encryption</h3>
       <ul>
-        <li class="slide">Key is the same length as message</li>
-        <li class="slide">Key is completely random</li>
-        <li class="slide">Key and message are stored in different places</li>
+        <li>Key is the same length as message</li>
+        <li>Key is completely random</li>
+        <li>Key and message are stored in different places</li>
       </ul>
     </section>
 
@@ -130,16 +127,39 @@
       <h3>59 - XOR decryption</h3>
       <p>Given:</p>
       <ul>
-        <li class="slide">Key is 3 lowercase characters</li>
-        <li class="slide">File with encrypted ASCII codes</li>
-        <li class="slide">Plain text is English</li>
+        <li>Key is 3 lowercase characters</li>
+        <li>File with encrypted ASCII codes</li>
+        <li>Plain text is English</li>
       </ul>
-      <p class="slide">Find sum of ASCII values of original text</p>
+      <p>Find sum of ASCII values of original text</p>
+    </section>
+
+    <section class="slide" id="p59-freq">
+      <h3>Frequency Analysis</h3>
+      <p>English characters vs. frequency of appearance</p>
+      <img src="freq.svg">
+    </section>
+
+    <section class="slide" id="pseudocode">
+      <h3>Analyze</h3>
+      <ul>
+        <li class="slide">Split cipher text to three piles for every third character</li>
+        <li class="slide">Find most common character in each pile, c</li>
+        <li class="slide">Determine most common English character, x</li>
+        <li class="slide">key = c XOR x</li>
+      </ul>
+      <h3 class="slide">Solve</h3>
+      <ul class="slide">
+        <li>XOR each character in cipher text with the key</li>
+        <li><table style="width:100%">
+        <tr><td>K</td><td>A</td><td>T</td><td>Y</td><td>P</td><td>E</td><td>R</td><td>R</td><td>Y</td></tr>
+        <tr><td>C</td><td>A</td><td>T</td><td>C</td><td>A</td><td>T</td><td>C</td><td>A</td><td>T</td></tr>
+      </table></li>
+      </ul>
     </section>
 
     <section class="slide" id="p59-code">
-      <h3>Analysis</h3>
-      <img src="freq.svg">
+      <h1>Code</h1>
     </section>
 
     <section class="slide" id="questions">
