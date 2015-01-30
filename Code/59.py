@@ -32,3 +32,4 @@ with open('59.txt', 'r') as f:
 		key.append(analyze(cipher, index, 3))
 	message = solve(cipher, key)
 	# print(sum([ord(char) for char in message]))
+	
