@@ -168,20 +168,57 @@
     </section>
 
     <section class="slide" id="pseudocode">
-      <h3>Analyze</h3>
+      <h3>Pseudocode</h3>
       <ul>
-        <li class="slide">Split cipher text to three piles for every third character</li>
+        <li class="slide">For key length n, split the cipher text to n piles for every nth character</li>
         <li class="slide">Find most common character in each pile, c</li>
-        <li class="slide">Determine most common English character, x</li>
-        <li class="slide">key = c XOR x</li>
+        <li class="slide">Find most common English character, x</li>
+        <li class="slide">The most common character in the ciphertext should correspond to the most common English character if our sample is large enough</li>
+        <li class="slide">x XOR key = c, c XOR key = x</li>
       </ul>
-      <h3 class="slide">Solve</h3>
+      <p class="slide">Thus, key = c XOR x</p>
+    </section>
+
+    <section class="slide" id="decryption-example">
+      <h3>Example decryption</h3>
+      <p>Find the message given:</p>
+      <ul>
+        <li>Key is one lowercase character</li>
+        <li>Encrypted message is ASCII codes: 29, 8, 31, 31, 20</li>
+        <li>Plain text is English</li>
+      </ul>
+    </section>
+
+    <section class="slide" id="decryption-solution">
+      <h3>Solve</h3>
+      <p><table style="width:100%">
+        <tr><td>29</td><td>08</td><td>31</td><td>31</td><td>20</td></tr>
+      </table></p>
+      <ul>
+        <li class="slide">Most common character in message: 31</li>
+        <li class="slide">Most common English character: e -> 101</li>
+        <li class="slide">key = 31 ^ 101 = 122 -> z</li>
+        <li class="slide">XOR all characters in the message by 112 (z)</li>
+        <table style="width:100%" class="slide">
+          <tr><td>29</td><td>8</td><td>31</td><td>31</td><td>20</td></tr>
+          <tr><td>112</td><td>112</td><td>112</td><td>112</td><td>112</td></tr>
+        </table>
+        <li class="slide">Convert message from int to ASCII character</li>
+      </ul>
+      <h3 class="slide">Answer: green</h3>
+    </section>
+
+    <section class="slide" id="most-frequency">
+      <h3>How to choose frequency</h3>
+      <p class="slide">Guess and Check</p>
+      <ul>
+        <li class="slide">Tried 'e' as the most frequent English character. Didn't work.</li>
+        <li class="slide">Most common character was actually space.</li>
+      </ul>
+      <p class="slide">Dictionaries</p>
       <ul class="slide">
-        <li>XOR each character in cipher text with the key</li>
-        <li><table style="width:100%">
-        <tr><td>K</td><td>A</td><td>T</td><td>Y</td><td>P</td><td>E</td><td>R</td><td>R</td><td>Y</td></tr>
-        <tr><td>C</td><td>A</td><td>T</td><td>C</td><td>A</td><td>T</td><td>C</td><td>A</td><td>T</td></tr>
-      </table></li>
+        <li>Python has modules for English dictionaries</li>
+        <li>Compare decrypted text programmatically</li>
       </ul>
     </section>
 
