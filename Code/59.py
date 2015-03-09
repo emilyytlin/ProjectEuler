@@ -8,11 +8,11 @@ def analyze(cipher, index, key_length):
 			sample.append(char)
 		count += 1
 	counter = collections.Counter(sample).most_common(5)
-	print(counter)
+	#print(counter)
 	for freq in counter:
 		key = int(freq[0]) ^ ord(' ')
 		if (key <= ord('z') and key >= ord('a')):
-			print("{}. key = {}\n".format(index, unichr(key)))
+			#print("{}. key = {}\n".format(index, unichr(key)))
 			return key
 
 def solve(cipher, key):
@@ -22,7 +22,7 @@ def solve(cipher, key):
 	for char in cipher:
 		message += unichr(key[count % key_length] ^ int(char))
 		count += 1
-	print(message)
+	#print(message)
 	return message
 
 with open('59.txt', 'r') as f:
