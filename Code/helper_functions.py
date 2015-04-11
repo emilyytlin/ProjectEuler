@@ -23,3 +23,13 @@ def eratoshenes(n):
 			primes.add(i)
 			multiples.update(range(i*i, n+1, i))
 	return primes
+
+def is_prime(n):
+	if (n == 2 or n == 3):
+		return True
+	i = 2
+	while i*i <= n:
+		if n % i == 0:
+			return False
+		i += 1
+	return True
